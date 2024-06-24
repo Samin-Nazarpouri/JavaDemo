@@ -2,7 +2,7 @@ package com.example.demo.employee;
 
 import java.time.LocalDate;
 
-public class Student {
+public class Employees {
     private Long id;
     private String name;
     private String email;
@@ -10,15 +10,15 @@ public class Student {
     private Integer age;
     private String role;
 
-    public Student() {
+    public Employees() {
     }
 
-    public Student(Long id,
-                   String name,
-                   String email,
-                   LocalDate dob,
-                   Integer age,
-                   String role) {
+    public Employees(Long id,
+                     String name,
+                     String email,
+                     LocalDate dob,
+                     Integer age,
+                     String role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -27,11 +27,11 @@ public class Student {
         this.role = role;
     }
 
-    public Student(String name,
-                   String email,
-                   LocalDate dob,
-                   Integer age,
-                   String role) {
+    public Employees(String name,
+                     String email,
+                     LocalDate dob,
+                     Integer age,
+                     String role) {
         this.name = name;
         this.email = email;
         this.dob = dob;

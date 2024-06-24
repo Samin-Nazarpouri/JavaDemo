@@ -1,8 +1,21 @@
 package com.example.demo.employee;
 
-import java.time.LocalDate;
+import jakarta.persistence.*;
 
-public class Employees {
+import java.time.LocalDate;
+@Entity
+@Table
+public class Employee {
+    @Id
+    @SequenceGenerator(
+            name = "employee_sequence",
+            sequenceName = "employee_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "employee_sequence"
+    )
     private Long id;
     private String name;
     private String email;
@@ -10,15 +23,15 @@ public class Employees {
     private Integer age;
     private String role;
 
-    public Employees() {
+    public Employee() {
     }
 
-    public Employees(Long id,
-                     String name,
-                     String email,
-                     LocalDate dob,
-                     Integer age,
-                     String role) {
+    public Employee(Long id,
+                    String name,
+                    String email,
+                    LocalDate dob,
+                    Integer age,
+                    String role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -27,11 +40,11 @@ public class Employees {
         this.role = role;
     }
 
-    public Employees(String name,
-                     String email,
-                     LocalDate dob,
-                     Integer age,
-                     String role) {
+    public Employee(String name,
+                    String email,
+                    LocalDate dob,
+                    Integer age,
+                    String role) {
         this.name = name;
         this.email = email;
         this.dob = dob;

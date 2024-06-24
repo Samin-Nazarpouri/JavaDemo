@@ -1,6 +1,5 @@
 package com.example.demo.employee;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -10,9 +9,9 @@ import java.util.List;
 @Service
 public class EmployeeService {
 
-    public List<Employees> getEmployee() {
+    public List<Employee> getEmployee() {
         return List.of(
-                new Employees(
+                new Employee(
                         1L,
                         "Sara Jones",
                         "sara.jones@outlook.com",
